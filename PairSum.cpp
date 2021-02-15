@@ -24,7 +24,7 @@ void pairs(int arr[], int size, int sum){
 //main func
 int main(){
     int arr[] = {3, 8, 1, 9, 0};
-    int sum = 4;
+    int sum = 17;
     int size = sizeof(arr)/sizeof(arr[0]);
 
     pairs(arr, size, sum);
