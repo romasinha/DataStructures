@@ -11,7 +11,7 @@ int main(){
         cin>>w;
         cin>>h;
         bmi = double(w/(h*h));
-        cout<<bmi<<endl;
+        
         
         if(bmi <= 18){
             cout<<"1"<<endl;
