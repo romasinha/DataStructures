@@ -1,23 +1,18 @@
-#include<bits/stdc++.h>
-#define pb push_back()
-#define int long long 
+#include <bits/stdc++.h> 
+using namespace std; 
 
-using namespace std;
-
-signed main(){
-    
-    int t;
+int main(){
+    int t, N, K;
     cin>>t;
-    
+    cin>>N;
+    cin>>K;
     while(t--){
-        int n,k,ans;
-        cin>>n>>k;
-        
-        if(k==0)
-            std::cout << n << std::endl;
-            
-        else
-         std::cout << n%k << std::endl;
+        if(N<K){
+            cout<<N<<endl;
+        }
+
+        else{
+            cout<<N%K<<endl;
+        }
     }
-    return 0;
 }
