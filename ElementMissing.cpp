@@ -2,45 +2,17 @@
 using namespace std; 
 
 int main(){
-    long long int n;
+    long long int n, req, sum=0;
     cin>>n;
-    long long int arr[n];
-    if(n==2){
-        for(int k=0; k<n-1; k++){
-            cin>>arr[k];
-            if(arr[k]==1)
-            cout<<"2";
-            else
-            cout<<"1";
-            
-        }
-        
-    }
+    int arr[n];
 
+    req = (n*(n+1))/2;
 
-    else{
-    for(long long int i=0; i<n-1; i++){
+    for(int i=0; i<n-1; i++){
         cin>>arr[i];
+        sum = sum + arr[i];
     }
 
-    sort(arr, arr+n);
+    cout<<req-sum<<endl;
 
-    if(arr[n-2]!=n){
-        cout<<n;
-        
-    }
-
-    else{
-    
-
-    for(long long int j=1; j<n-1; j++){
-        
-        if(arr[j]-arr[j-1] !=1){
-            cout<<arr[j]-1;
-           
-        }
-    }
-    }
-    
-}
 }
