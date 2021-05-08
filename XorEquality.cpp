@@ -22,7 +22,7 @@ int main(){
         x = pow(10, 9);
         m = x+7;
         cin>>n;
-        cout<<fastModExp(2, n-1, x )<<endl;
+        cout<<fastModExp(2, n-1, m )<<endl;
         
     }
     return 0;
