@@ -51,12 +51,26 @@ int main(){
        if(arr[0][0]=='O' && arr[1][1]=='O' && arr[2][2]=='O') wino=1;
        if(arr[0][2]=='O' && arr[1][1]=='O' && arr[2][0]=='O') wino=1;
 
-       if((winx==1 && wino==1) || (cntx-cnto)<0 || (cntx-cnto)>1)cout<<3<<endl;
-       else if(cntx==0 && cnto==0 && cnt_==9)cout<<2<<endl;
-       else if(winx==1 && wino==0 && cntx>cnto)cout<<1<<endl;
-       else if(winx==0 && wino==1 && cntx==cnto)cout<<1<<endl;
-       else if(winx==0 && wino==0 && cnt_==0)cout<<1<<endl;
-       else if(winx==0 && wino==0 && cnt_>0)cout<<2<<endl;
+
+       //both win or count of x is less than o not possi
+       if((winx==1 && wino==1) || (cntx-cnto)<0 || (cntx-cnto)>1)
+       cout<<3<<endl; 
+       //count of both is 0, only spaces then game fwd
+       else if(cntx==0 && cnto==0 && cnt_==9)
+       cout<<2<<endl;
+       //none winning and some space left, then game fwd
+       else if(winx==0 && wino==0 && cnt_>0)
+       cout<<2<<endl;
+       //x wins and cnt of x is also more then winning
+       else if(winx==1 && wino==0 && cntx>cnto)
+       cout<<1<<endl;
+       //o wins and both same
+       else if(winx==0 && wino==1 && cntx==cnto)
+       cout<<1<<endl;
+       //none win, board full, new game fwd
+       else if(winx==0 && wino==0 && cnt_==0)
+       cout<<1<<endl;
+      
        else cout<<3<<endl;
   }
 
