@@ -21,7 +21,7 @@ int main(){
          res+=gcd(a, b);
          a = b;
         }
-    cout<<res<<endl;
+    cout<<res/1000000009<<endl;
  }
 
  return 0;
