@@ -15,7 +15,7 @@ int main(){
         cin>>k;
         for(int i=1; i<=2*k; i++){
             a = k+(i*i);
-            b = k+((i+1)*(i+1));
+            b = 2*i+1;
             gcd(a,b);
             res += gcd(a,b);
             
